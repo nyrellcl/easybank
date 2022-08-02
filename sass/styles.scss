@@ -1,0 +1,422 @@
+@import "./base/base";
+
+@import "./variables/variables";
+
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;700&display=swap');
+
+#section-2{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(244, 245, 247, 1);
+}
+
+#articles{
+    height: 100vh;
+    background-color: #F2F2F2;
+}
+
+body{
+    font-family: 'Public Sans', sans-serif;
+}
+
+.invite-btn{
+    width: 163px;
+    height: 44px;
+    border-radius: 22px;
+    background-image: linear-gradient(165deg, $green1, $green2);
+    border: none;
+    color: #fff;
+    font-weight: 700;
+    transition: all 300ms ease-in-out;
+    &:hover{
+        cursor: pointer;
+        opacity: 0.7;
+    }
+}
+
+.nav-bar{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 80px;
+    .nav-list{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 331px;
+        height: 17px;
+        a{
+            color: $grey-green;
+            position: relative;
+            transition: all ease-in-out 250ms;
+            &:hover{
+                color: #000;
+            }
+        
+        }
+        a::after{
+            content: '';
+            position: absolute;
+            display: block;
+            height: 0.4em;
+            width: 0;
+            background-image: linear-gradient(165deg, $green1, $green2);
+            bottom: -2em;
+            transition: all ease-in-out 250ms;
+        }
+
+        a:hover::after{
+            width: 100%;
+
+        }
+    }
+}
+
+//hero section
+.hero-content-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    .content{
+        height: 447px;
+        height: 316px;
+        display: flex;
+        flex-direction: column;
+        padding-left: 165px;
+        h1{
+            font-size: 56px;
+            font-weight: 300;
+            color: $dark-navy;
+        }
+        p{
+            font-size: 18px;
+            color: $grey-green;
+            line-height: 28px;
+            margin: 2rem 0;
+            width: 447px;
+            height: 84px;
+        }
+    }
+    .hero-img{
+        position: relative;
+        width: 100%;
+        height: 901px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .img-1{
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            width: 1233px;
+        }
+        .img-2{
+            position: absolute;
+            top: 5px;
+            left: 200px;
+            z-index: 2;
+        }
+    }
+}
+
+//section2
+.choose{
+    width: 635px;
+    height: 136px;
+    padding-left: 165px;
+    padding-top: 94px;
+    h2{
+        color: $dark-navy;
+        font-size: 40px;
+        font-weight: 300;
+        width: auto;
+        height: 64px;
+    }
+    p{
+        font-size: 18px;
+        width: 635px;
+        height: 56px;
+        color: $grey-green;
+        line-height: 28px;
+    }
+}
+
+.choose-cards{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.card{
+    width: 255px;
+    height: 278px;
+    .card-content{
+        margin-top: 40px;
+        height: 166px;
+        display: flex;
+        flex-direction: column;
+        gap: 26px;
+        h3{
+            color: $dark-navy;
+            font-weight: 300;
+            font-size: 24px;
+        }
+        p{
+            height: 112px;
+            line-height: 26px;
+            font-size: 16px;
+            color: $grey-green;
+        }
+    }
+}
+
+//articles
+.article-title{
+    font-size: 40px;
+    color: $dark-navy;
+    letter-spacing: -0.71px;
+    height: 64px;
+    padding-top: 78px;
+    margin-left: 165px;
+    margin-bottom: 40px;
+    h2{
+        font-weight: 300;
+
+    }
+}
+
+.article-card-container{
+    width: 1110px;
+    height: 499px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    .article-card{
+        width: 255px;
+        height: 395px;
+        background-color: #fff;
+        figure{
+            img{
+                width: 255px;
+                height: 200px;
+            }
+            figcaption{
+                color: $grey-green;
+                font-size: 10px;
+                font-weight: 400;
+                margin: 25px 176px 8px 24px;
+                width: 85px;
+                height: 18px;
+                letter-spacing: -0.16px;
+            }
+        }
+        .article-content{
+            width: 207px;
+            height: 120px;
+            margin: 0 auto;
+            h4{
+                width: 207px;
+                height: 40px;
+                color: $dark-navy;
+                font-size: 16px;
+                letter-spacing: -0.29px;
+                font-weight: 300;
+                line-height: 20px;
+                margin-bottom: 8px;
+            }
+            p{
+                color: $grey-green;
+                width: 207px;
+                height: 72px;
+                font-size: 13px;
+                line-height: 18px;
+                letter-spacing: -0.2px;
+            }
+        }
+    }
+}
+
+//footer
+.footer-container{
+    width: 100vw;
+    background-color: $dark-navy;
+    height: 191px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    .footer-links{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-left: 165px;
+        svg{
+            margin-bottom: 55px;
+        }
+        .icon-links{
+            ul{
+                display: flex;
+                width: 154px;
+                height: 20px;
+                justify-content: space-between;
+                img{
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+    }
+    .footer-nav{
+        .footer-list{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            gap: 8px;
+            li{
+                a{
+                    color: #fff;
+                    font-size: 15px;
+                    font-weight: 400;
+                    transition: all ease-in-out 250ms;
+                    &:hover{
+                        cursor: pointer;
+                        color: $solid-green;
+                    }
+                }
+            }
+            
+        }
+    }
+    .footer-nav-2{
+        .footer-list-2{
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            li{
+                a{
+                    color: #fff;
+                    font-size: 15px;
+                    font-weight: 400;
+                    transition: all ease-in-out 250ms;
+                    &:hover{
+                        cursor: pointer;
+                        color: $solid-green;
+                    }
+                }
+            }
+        }
+    }
+    .footer-invite{
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+        gap: 24px;
+        p{
+            color: $grey-green;
+            width: auto;
+            height: 26px;
+        }
+    }
+}
+
+
+//mobile menu
+#ham-icon {
+    margin: auto 0;
+    display: none;
+    cursor: pointer;
+}
+
+//sets colors of the bars
+#ham-icon div {
+    width: 35px;
+    height: 3px;
+    background-color: $dark-navy;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+  
+.ham-container {
+    width: 100%;
+    padding: 1rem 0 0 1rem;
+    display: none;
+}
+  
+  /*will rotate counterclockwise once user presses the icon which will form an X along with bar2*/
+.open{
+    .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+    transform: rotate(-45deg) translate(-6px, 6px);
+
+}
+/*will 'disappear' the user clicks on the icon*/
+.bar2 {
+  opacity: 0;
+}
+.bar3 {
+    -webkit-transform: rotate(45deg) translate(-6px, -8px);
+    transform: rotate(45deg) translate(-6px, -8px);
+}
+.mobile-menu {
+    display: flex;
+    flex-direction: column; /*stacks each link on top of each other on mobile*/
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    height: auto;
+    margin: 0 auto;
+    top: 80px;
+    width: 80%;
+    right: 0;
+    box-shadow: -1px 9px 90px 180px #2d324d59;
+    border-radius: 4px;
+    padding: 32px 0;
+    li{
+        padding: 0.5rem;
+        a{
+            color: hsl(213, 9%, 39%);
+        }
+    }
+}
+
+}
+  
+  /*once user opens the icon the links will display in a stacked view*/
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 50px; /*fixed height of header*/
+    left: 0;
+    height: calc(
+      70vh - 50px
+    ); /*takes the full remaining space of site hence width 100. set the height to 100 and subtract it from the height of header*/
+    width: 100%;
+    margin-top: 10px;
+    font-size: 1.5rem;
+    /*sets the background of the menu once user opens the icon. I want to make this transition more seamless. (future update)*/
+    background-color: white;
+    a{
+        color: #000;
+    }
+    li{
+        margin-bottom: 10px;
+    }
+}
+  
+.attribution{
+    color: $grey-green;
+    a{
+        color: #fff;
+    }
+}
+@import "./media/media";
